@@ -519,6 +519,17 @@ span {
     }
 }
 
+@media (max-width: 398px){
+    .home-image::before{
+        content: '';
+        position: absolute;
+        inset: -15rem 10rem;
+        background: linear-gradient(315deg, var(--main-color), var(--secondary-color));
+        transition: 0.5s;
+        animation: rotate 6s linear infinite;
+    }
+}
+
 @media (max-width: 365px){
     .home-image{
         width: 90vw;
