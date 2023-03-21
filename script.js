@@ -1,6 +1,18 @@
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
+const countEl = document.getElementById('count');
+
+updateVisitCount();
+
+function updateVisitCount() {
+    fetch('api.countapi.xyz/update/barszaportfolio/visits/?amount=1')
+    .then(res => res.json())
+    .then(res => {
+        countEl.innerHTML = res.value;
+    });
+}
+
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
@@ -17,14 +29,3 @@ window.onscroll = () => {
     });
 };
 
-const countEl = document.getElementById('count');
-
-updateVisitCount();
-
-function updateVisitCount() {
-    fetch('api.countapi.xyz/update/barszaportfolio/visits/?amount=1')
-    .then(res => res.json())
-    .then(res => {
-        countEl.innerHTML = res.value;
-    });
-}
