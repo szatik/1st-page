@@ -20,6 +20,9 @@
     --main-color: #ff0080;
     --secondary-color: #00ffff;
     --black: #000000;
+    --main-color-transparent: rgba(255, 0, 128, 0.44);
+    --secondary-color-transparent: rgba(0, 255, 255, 0.44);
+
 
 }
 
@@ -239,6 +242,15 @@ span {
     font-size: 4.5rem;
 }
 
+.about-content{
+    background: var(--bg-color);
+    padding: 5rem;
+    border: var(--text-color) solid 0.5rem;
+    border-radius: 0%;
+    box-shadow: 0 0 1rem var(--text-color);
+}
+
+
 .about-content h2{
     text-align: left;
     line-height: 1.2;
@@ -410,6 +422,51 @@ span {
     text-shadow: 0 0 1.6rem var(--main-color);
 }
 
+.bubblescontainer{
+    min-height: 100vh;
+    z-index: 0;
+    background: var(--second-bg-color);
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles spanb{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: var(--main-color);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px var(--main-color-transparent),
+    0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
+    animation: animate 15s linear infinite;
+    animation-duration: calc( 100s /var(--i));
+}
+
+.bubbles spanb:nth-child(even){
+    background: var(--secondary-color);
+    box-shadow: 0 0 0 10px var(--secondary-color-transparent),
+    0 0 50px var(--secondary-color),
+    0 0 100px var(--secondary-color);
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+
+    100%{
+        transform: translateY(-10vh) scale(-1);
+    }
+}
+
 @media (max-width: 1200px){
     html{
         font-size: 55%;
@@ -501,11 +558,25 @@ span {
         width: 70vw;
         margin-top: 0rem;
     }
+
+    .bubbles spanb{
+        height: 10px;
+        width: 15px;
+    }
+
+    .about-content{
+        margin-top: 0rem;
+    }
 }
 
 @media (max-width: 671px){
     .projects-container{
         grid-template-columns: 1fr;
+    }
+
+    .bubbles spanb{
+        height: 10px;
+        width: 15px;
     }
 }
 
@@ -516,6 +587,11 @@ span {
 
     .contact form .input-box input{
         width: 100%;
+    }
+
+    .bubbles spanb{
+        height: 5px;
+        width: 10px;
     }
 }
 
