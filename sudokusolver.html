@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>barsza.dev Portfolio</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://api.countapi.xyz/hit/barszaportfolio/visits?callback=websiteVisits"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">barsza.dev</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="https://szatik.github.io/portfolio/#home">Home</a>
+            <a href="https://szatik.github.io/portfolio/#about">About</a>
+            <a href="https://szatik.github.io/portfolio/#projects">My Projects</a>
+            <a href="https://szatik.github.io/portfolio/#contact">Contact Me</a>
+            
+        </nav>
+    </header>
+
+    <section class="sudokusolver" id="sudokusolver">
+        <div class="sudokusolver-text">
+            <h2>Sudoku <span>solver</span></h2>
+            <p1>
+                I present to you one of my recent projects, that is a Sudoku solver! Sudoku is a logic game, the rules are simple. 
+                A 9×9 square must be filled in with numbers from 1-9 with no repeated numbers in each line, horizontally or vertically. To challenge you more, 
+                there are 3×3 squares marked out in the grid, and each of these squares can't have any repeat numbers either.
+                Out of pure boredom and need of improving my Python skills, I designed and programmed application that allows user to insert values of the puzzle.
+                After inputing the values user can click "Solve" button, that fills every empty square with correct answer, thus completeing the puzzle.
+                There is also a "Clear" button, that reassigns the value 0 to every box. "Fill with sample" button fills some of the boxes with sample values.
+            </p1>
+
+            <h3><a href="#sudokusolver">Github repository <i class='bx bxl-github'></i></a></h3>
+        </div>
+        <div class="sudokusolver-image">
+            <img src="images/sudokusolver.png" alt="">
+        </div>
+        
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Bartłomiej Szatkowski | All Rights Reserved.</p>
+        </div>
+
+        <div class="counter">This page has:<h5 id="count"></h5> views</div>
+
+        <div class="footer-icontop">
+            <a href="#home"><i class='bx bxs-to-top' ></i></a>
+        </div>
+        
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+</body>
+</html>

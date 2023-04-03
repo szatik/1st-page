@@ -457,6 +457,54 @@ span {
     0 0 100px var(--secondary-color);
 }
 
+.sudokusolver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+}
+
+.sudokusolver .sudokusolver-text{
+    width: 90vh;
+    font-size: 1.5rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.sudokusolver .sudokusolver-text h2{
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 5rem;
+}
+
+
+.sudokusolver .sudokusolver-text h3{
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.sudokusolver .sudokusolver-text h3 a{
+    text-align: right;
+    margin-top: 2rem;
+    color: var(--main-color);
+    border: var(--black) solid 5px;
+    border-radius: 5%;
+    background-color: var(--black);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.sudokusolver .sudokusolver-text h3 a i{
+    color: var(--main-color);
+    scale: 150%;
+    padding-top: 1rem;
+    
+}
+
+.sudokusolver .sudokusolver-image{
+    border: 0.5rem solid var(--black);
+}
+
+
 @keyframes animate {
     0%{
         transform: translateY(100vh) scale(0);
